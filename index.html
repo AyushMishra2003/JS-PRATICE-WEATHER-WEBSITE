@@ -7,9 +7,37 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <input id="search"  type="text" placeholder="ENTER LOCATION">
+    <!-- <input id="search"  type="text" placeholder="ENTER LOCATION">
     <button id="btn">GO</button>
-    <p id="temp"></p>
+    <p id="temp"></p> -->
+    <main>
+        <div class="top">
+            <h2 class="Welcome">Welcome to the Weather App</h2>
+            <input id="search"  type="search" placeholder="Enter your City/Country">
+            <button id="go">GO</button>
+        </div>
+        <div class="sec">
+            <div class="first">
+                <div class="logo">
+                    <img id="logo" src="" alt="">
+                    <p id="tempr"></p>
+                    <p id="far"></p>
+                </div>
+                <p id="location"></p>
+            </div>
+            <div class="second">
+                <div class="wind">
+                    <p id="wind"></p>
+                    <p id="hum"></p>
+                </div>
+                <div class="time">
+                    <p id="time"></p>
+                </div>
+            </div>
+             <div class="last">
+            </div>
+        </div>     
+    </main>
 </body>
 <script src="./script.js"></script>
 </html>
