@@ -96,3 +96,30 @@ main{
     flex-direction: column;
     gap: 1rem;
 }
+/* MEDIA-QUERY */
+@media screen and (max-width:768px){
+    .sec{
+        gap: 2rem;
+    }
+    .first{
+        gap: 1.5rem;
+    }
+    #location{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:425px){
+     .first{
+        gap: 0rem;
+        font-size: 0.8rem;
+     }
+     .sec{
+        gap: 2rem;
+     }
+     #location{
+        font-size: 0.7rem;
+     }
+     .second{
+        gap: 1rem;
+     }
+}
