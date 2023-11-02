@@ -25,6 +25,9 @@ body{
     width: 15rem;
     gap: 1rem;
 }
+input{
+    color: white;
+}
 #search{
     padding: 0.3rem 0.7rem;
     background-color: rgb(41, 34, 34);
