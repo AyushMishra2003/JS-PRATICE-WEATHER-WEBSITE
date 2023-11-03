@@ -37,22 +37,22 @@ document.querySelector('#go').addEventListener("click",function(){
            humanity.innerHTML=`Humidity ${resp1.current.humidity}%`
            time.innerHTML=`${resp1.location.localtime}`
           //  console.log(resp1.forecast.forecastday[0].day);
-            resp1.forecast.forecastday.forEach(function(item){
-                const child=document.createElement('div')
-                child.classList='childlast'
-                //const headig=document.createElement('p')
-                //headig.innerHTML='DATE MIN AND MAX TEMP'
-                const date=document.createElement('p')
-                const mint=document.createElement('p')
-                const maxt=document.createElement('p')
-                date.innerHTML=item.date;
-                mint.innerHTML=`${item.day.mintemp_c} ${'&#176'}C`;	 
-                maxt.innerHTML=`${item.day.maxtemp_c}${'&#176'}C`;
-                //child.appendChild(headig)
-                child.appendChild(date)
-                child.appendChild(mint)
-                child.appendChild(maxt)
-                last.appendChild(child)
+            // resp1.forecast.forecastday.forEach(function(item){
+            //     const child=document.createElement('div')
+            //     child.classList='childlast'
+            //     //const headig=document.createElement('p')
+            //     //headig.innerHTML='DATE MIN AND MAX TEMP'
+            //     const date=document.createElement('p')
+            //     const mint=document.createElement('p')
+            //     const maxt=document.createElement('p')
+            //     date.innerHTML=item.date;
+            //     mint.innerHTML=`${item.day.mintemp_c} ${'&#176'}C`;	 
+            //     maxt.innerHTML=`${item.day.maxtemp_c}${'&#176'}C`;
+            //     //child.appendChild(headig)
+            //     child.appendChild(date)
+            //     child.appendChild(mint)
+            //     child.appendChild(maxt)
+            //     last.appendChild(child)
             });
             // for (let index = 0; index < 3; index++) {
             //     const childlast=document.createElement('div')
@@ -87,4 +87,3 @@ document.querySelector('#go').addEventListener("click",function(){
       }).catch(function(error){
         console.log(error);
       })
-})
