@@ -4,141 +4,169 @@
     box-sizing: border-box;
 }
 body{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   gap: 2rem;
-   background-image: url(./image/back.jpeg);
-   background-size: cover;
-   background-position: center;
-   overflow: hidden;
-   filter: blur(0.2px);
-   width: 100vw;
-}
-.top{
-    margin-top: 3rem;
     display: flex;
     flex-direction: column;
+    width: 100vw;
     align-items: center;
-    text-align: center;
-    width: 15rem;
-    gap: 1rem;
-}
-input{
-    color: white;
-}
-#search{
-    padding: 0.3rem 0.7rem;
-    background-color: rgb(41, 34, 34);
-    border: none;
-    border-radius: 0.2rem;
-}
-#go{
-    padding: 0.3rem 1.5rem;
-    background-color: red;
-    border: none;
-    border-radius: 0.2rem;
-
-}
-
-.Welcome{
-    color: rgb(169, 112, 6);
-    font-size: 2rem;
-    font-style: italic;
+    justify-content: center;
+    /* padding: 2rem; */
+    overflow-x: hidden;
 }
 main{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.623);
     gap: 2rem;
-    padding: 1rem;
-}
-.first{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 3rem;
+    justify-content: center;
+    padding:2rem 3rem;
+    border: 2px solid black;
+    box-shadow:  5px 10px 20px rgb(52, 39, 39);
+}
+input{
+    padding: 0.2rem 5rem;
 }
 .logo{
+    position: relative;
+}
+#search{
+    position: absolute;
+    left: 80%;
+    top: 15%;
+    right: 0%;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+}
+.fa-magnifying-glass{
+    color: red;
+    font-size: 1rem;
+}
+.fa-location-dot{
+    color: red;
+    font-size: 1.5rem;
+} 
+.location{
     display: flex;
     align-items: center;
-    /* align-items: flex-end; */
+    gap: 2rem;
+ 
 }
-.second{
+#loc{
+    /* color: red;   */
+     font-size: 1.2rem;
+}
+.temp{
     display: flex;
+    align-items: center;
+    gap: 2rem;  
+}
+#image{
+    width: 6rem;
+}
+#temperature{
+    font-size: 2rem;
+}
+#contion{
+    font-size: 1.5rem;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#datetime{
+    font-size: 1.3rem;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2rem;
+}
+.parent-wind{
+    display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 5rem;
+}
+.wind-cloud{
+    display:flex;
+    gap: 2rem;
+}
+.child{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.fa-wind{
+    font-size: 1.5rem;
+    color: green;
+} 
+.fa-cloud{
+    font-size: 1.5rem;
+    color: aqua;
+} 
+.fa-droplet{
+    font-size: 1.5rem;
+}
+.fa-gem{
+    font-size: 1.5rem;
+    color: red;
+} 
+.humdi-rain{
+    display: flex;
     gap: 2rem;
 }
 #last{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:   0.4rem;
-}
-.sec{
-    color: white;
-    display: flex;
-    flex-direction: column;
     gap: 1rem;
 }
 .childlast{
-    width: 8rem;
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
-    justify-content: center;
+    gap: 2rem
+    ;
+    border: 2px solid black;
     background-color: black;
-    gap: 3rem;
-    border-radius: 0.2rem;
-    padding: 0.2rem 7rem;
+    color: white;
+    /* padding: 0.3rem; */
+    border-radius: 0.3rem;
 }
-/* MEDIA-QUERY */
-@media screen and (max-width:768px){
-    .sec{
-        /* gap: 2rem; */
-        /* font-size: 1.5rem; */
+.childlast img{
+    font-size: 10rem;
+    width: 2.3rem;
+}
+@media screen and (max-width: 768px){
+    main{
+        padding: 0rem;
     }
-    .first{
-        gap: 2rem;
+    .parent-wind{
+        gap: 0rem;
     }
-    #location{
-        font-size: 1rem;
+}
+@media screen and (max-width: 425px){
+    main{
+        border: 2px solid black;
+        padding: 0rem;
+        border: 2px solid blanchedalmond;
+    }
+    .parent-wind{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    input{
+        padding: 0.3rem 2rem;
+    }
+    .wind-cloud{
+        gap: 7rem;
+    }
+    .humdi-rain{
+        gap: 5rem;
     }
     .childlast{
         gap: 1rem;
     }
-    .last{
-        gap: 0rem;
-        
-    }
-    .second{
-        gap: 5rem;
-    }
-}
-@media screen and (max-width:425px){
-     .first{
-        gap: 3rem;
-        font-size: 1rem;
-     }
-     .sec{
-        gap: 1rem;
-     }
-     #location{
-        font-size: 0.7rem;
-     }
-     .second{
-        gap: 2rem;
-     }
-     .last{
-        gap: 0rem;
-     }
-     .childlast{
-        gap: 1rem;
-        width: 5rem;
-     }
 }
