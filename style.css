@@ -156,6 +156,13 @@ input{
     .parent-wind{
         flex-direction: column;
         gap: 3rem;
+        padding: 0.5rem;
+    }
+    .wind-cloud{
+        gap: 0rem;
+    }
+    .humdi-rain{
+        gap: 0rem;
     }
     input{
         padding: 0.3rem 2rem;
@@ -168,5 +175,11 @@ input{
     }
     .childlast{
         gap: 1rem;
+    }
+    .location{
+        gap: 0.5rem;
+    }
+    .temp{
+        gap: 0rem;
     }
 }

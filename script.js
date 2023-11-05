@@ -31,15 +31,6 @@ document.querySelector('#search').addEventListener("click",function(){
         document.getElementById('cloud').innerHTML=`${resp1.current.cloud}${'%'}`
         document.getElementById('Humidity').innerHTML=`${resp1.current.humidity}${'%'}`
         document.getElementById('pressure').innerHTML=`${resp1.current.pressure_in}`
-
-          //  temp.innerHTML=`${resp1.current.temp_c}${'&#176'}C`
-          //  far.innerHTML=`${resp1.current.temp_f}${'&#176'}F`
-          //  logo.src=resp1.current.condition.icon
-          //  locati.innerHTML=`${resp1.location.name}|${resp1.location.region}`
-          //  wind.innerHTML=`Wind ${resp1.current.wind_kph}kph`
-          //  humanity.innerHTML=`Humidity ${resp1.current.humidity}%`
-          //  time.innerHTML=`${resp1.location.localtime}`
-          //  let i=0;
             resp1.forecast.forecastday.forEach(function(item){
               document.getElementById('last').innerHTML+=`<div class="childlast"><p>${item.date}</p>   <img  src="${item.day.condition.icon}" alt=""> <p>${item.day.maxtemp_c}${'&#176'}C</p> <p>${item.day.mintemp_c}${'&#176'}C</p></div>`
             });
