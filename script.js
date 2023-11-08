@@ -3,10 +3,19 @@ const url='https://api.weatherapi.com/v1/forecast.json'
 const key='a0edc6b5af8749b3a8b164009230111'
  const val=document.querySelector('#searchval')
 document.querySelector('#search').addEventListener("click",function(){
+      if(val.value=="")
+      {
+        console.log("ayush");
+        alert("Please type valid location")
+      }
+      else
+      {
       const pure_url=`${url}?key=${key}&q=${val.value}&days=${3}`
-      fetch(pure_url).then(function(response){
+      fetch(pure_url)
+      .then(function(response){
          return  response.json()
-      }).then(function(resp1){
+      })
+      .then(function(resp1){
         document.querySelector('#loc').innerHTML=`${resp1.location.name} ${resp1.location.region},${resp1.location.country}`
         document.getElementById('image').src=resp1.current.condition.icon
         document.getElementById('temperature').innerHTML=`${resp1.current.temp_c}${'&#176'}C`
@@ -32,21 +41,19 @@ document.querySelector('#search').addEventListener("click",function(){
               return (t<=time);  
           })
           hr.forEach(function(hour){
-               document.getElementById('dailytemp').innerHTML+=`<div class="daily"><p>${hour.time}</p> <img src="${hour.condition.icon}" <p>${hour.feelslike_c}${'$176'}</p>
+               document.getElementById('dailytemp').innerHTML+=`<div class="daily"><p>${hour.time}</p> <img src="${hour.condition.icon}" <p>${hour.feelslike_c}${'&#176'}C</p>
                </div>`
             })
           // });
           hr1.forEach(function(hour){
-            document.getElementById('dailytemp').innerHTML+=`<div class="daily"><p>${hour.time}</p> <img src="${hour.condition.icon}" <p>${hour.feelslike_c}${'$176'}</p>
+            document.getElementById('dailytemp').innerHTML+=`<div class="daily"><p>${hour.time}<p> <img src="${hour.condition.icon}" <p>${hour.feelslike_c}${'&#176'}C</p>
             </div>`
-         })
-        });
-          document.getElementById('last').innerHTML="" 
-          val.value=""
-
-          }).catch(function(e){
-            console.log(e);
-            alert("PLEASE TYPE VALID LOCATION")
-          })
-     
-
+         }) 
+        })
+        .catch(function(e){
+           console.log(e);
+        })
+        document.getElementById('last').innerHTML="" 
+          val.value="" 
+      }
+      })
