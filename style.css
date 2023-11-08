@@ -139,6 +139,24 @@ input{
     font-size: 10rem;
     width: 2.3rem;
 }
+.daily{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black; 
+  
+}
+#dailytemp{
+    display: flex;
+     overflow-x: auto;
+     width: 20rem;
+}
+#dailytemp::-webkit-scrollbar{
+    width: 0;
+    border: 2px solid black;
+    border-radius: 2rem;
+    background-color: rgb(133, 132, 132);
+}
 @media screen and (max-width: 768px){
     main{
         padding: 0rem;
